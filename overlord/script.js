@@ -1,13 +1,17 @@
 // =========================================
-//  ССЫЛКИ — ЗАМЕНИТЕ НА СВОИ
+//  ССЫЛКИ — ПРЯМЫЕ ФАЙЛЫ ИЗ РЕЛИЗОВ
 // =========================================
 const LINKS = {
   github:   "https://github.com/tolochkovl2013-lab/overlord",
   releases: "https://github.com/tolochkovl2013-lab/overlord/releases",
-  download: "https://github.com/tolochkovl2013-lab/overlord/releases/latest/download/OverlordSetup.exe",
-  "rel-v12":     "https://github.com/tolochkovl2013-lab/overlord/releases/tag/v1.2",
-  "rel-privacy": "https://github.com/tolochkovl2013-lab/overlord/releases/tag/privacy-1.0",
-  "rel-toolkit": "https://github.com/tolochkovl2013-lab/overlord/releases/tag/v0.1-toolkit"
+
+  // Главная кнопка "Скачать Overlord" — ведёт на Setup (установщик)
+  download: "https://github.com/tolochkovl2013-lab/overlord/releases/download/setup-1.0/OverlordSetup.exe",
+
+  // Прямые ссылки на файлы программ (карточки)
+  "rel-v12":     "https://github.com/tolochkovl2013-lab/overlord/releases/download/v1.2/overlord-v1.2.zip",
+  "rel-privacy": "https://github.com/tolochkovl2013-lab/overlord/releases/download/privacy-1.0/privacy-1.0.zip",
+  "rel-toolkit": "https://github.com/tolochkovl2013-lab/overlord/releases/download/v0.1-toolkit/OVL_Toolkit.exe"
 };
 
 // =========================================
@@ -418,7 +422,6 @@ function initCardTilt() {
       card.style.transform =
         `perspective(1000px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-6px)`;
 
-      // Световое пятно следует за курсором
       const mx = ((e.clientX - r.left) / r.width) * 100;
       const my = ((e.clientY - r.top) / r.height) * 100;
       card.style.setProperty('--mx', mx + '%');

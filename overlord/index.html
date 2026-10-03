@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overlord — ИИ-ассистент, Приватность и Toolkit</title>
+<meta name="description" content="Overlord — набор из трёх программ для Windows: ИИ-ассистент, офлайн-версия для приватности и системный Toolkit.">
+<meta name="theme-color" content="#7c5cff">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88' fill='%237c5cff'>♛</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Анимированный фон -->
+<div class="bg-aurora"></div>
+<div class="bg-orbs">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+</div>
+
+<!-- Курсор-прожектор -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Полоса прогресса скролла -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">♛</span>
+      <span class="brand-text">Overlord</span>
+    </a>
+    <nav class="nav">
+      <a href="#programs" data-i18n="nav.programs">Программы</a>
+      <a href="#screens" data-i18n="nav.screens">Скриншоты</a>
+      <a href="#install" data-i18n="nav.install">Установка</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#" data-link="github" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+    <a href="#" class="btn btn-primary btn-sm" data-link="download">
+      <span class="btn-shine"></span>
+      <span data-i18n="nav.download">Скачать</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-mark reveal">♛</div>
+      <h1 class="reveal hero-title" data-i18n="hero.title">Overlord</h1>
+      <p class="lead reveal" data-i18n="hero.lead">
+        Overlord — это набор из трёх программ для Windows: умный ИИ-ассистент,
+        полностью офлайн-версия для приватной работы и системный Toolkit для
+        диагностики компьютера. Всё ставится одним установщиком и работает
+        локально — ваши данные не уходят в облако.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#" class="btn btn-primary btn-lg" data-link="download">
+          <span class="btn-shine"></span>
+          <span>⬇</span> <span data-i18n="hero.download">Скачать Overlord</span>
+        </a>
+        <a href="#" class="btn btn-ghost btn-lg" data-link="github" target="_blank" rel="noopener" data-i18n="hero.github">
+          Исходники на GitHub
+        </a>
+      </div>
+      <p class="hero-note reveal" data-i18n="hero.note">
+        Windows 10 / 11 · ~38 МБ · бесплатно
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="programs">
+    <div class="wrap">
+      <h2 class="section-title reveal" data-i18n="programs.title">Три программы</h2>
+      <p class="section-sub reveal" data-i18n="programs.sub">
+        Ставятся вместе через Overlord Hub — лаунчер сам скачает нужное и подтянет модели.
+      </p>
+
+      <div class="cards">
+
+        <article class="card reveal" data-tilt>
+          <div class="card-icon">🤖</div>
+          <h3><span data-i18n="card.v12.title">Overlord v1.2</span></h3>
+          <p class="card-tag" data-i18n="card.v12.tag">Полноценный ИИ-ассистент</p>
+          <ul class="card-list">
+            <li data-i18n="card.v12.li1">4 языка: RU / UK / EN / DE</li>
+            <li data-i18n="card.v12.li2">Работа с Word и PPTX</li>
+            <li data-i18n="card.v12.li3">Cloud Vision — распознавание изображений</li>
+            <li data-i18n="card.v12.li4">DeepThink — режим глубоких рассуждений</li>
+          </ul>
+          <div class="card-foot">
+            <span class="size" data-i18n="card.v12.size">~350 МБ</span>
+            <a href="#" class="link" data-link="rel-v12" target="_blank" rel="noopener" data-i18n="card.v12.link">Скачать ZIP ↗</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-tilt>
+          <div class="card-icon">🔒</div>
+          <h3><span data-i18n="card.privacy.title">Overlord Privacy</span></h3>
+          <p class="card-tag" data-i18n="card.privacy.tag">Офлайн и приватно</p>
+          <ul class="card-list">
+            <li data-i18n="card.privacy.li1">Работает без интернета</li>
+            <li data-i18n="card.privacy.li2">Украинский язык интерфейса</li>
+            <li data-i18n="card.privacy.li3">Режим Cyber Secure</li>
+            <li data-i18n="card.privacy.li4">Оптимизировано для слабых ноутбуков</li>
+          </ul>
+          <div class="card-foot">
+            <span class="size" data-i18n="card.privacy.size">~162 МБ</span>
+            <a href="#" class="link" data-link="rel-privacy" target="_blank" rel="noopener" data-i18n="card.privacy.link">Скачать ZIP ↗</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-tilt>
+          <div class="card-icon">🛠</div>
+          <h3><span data-i18n="card.toolkit.title">OVL Toolkit</span></h3>
+          <p class="card-tag" data-i18n="card.toolkit.tag">Диагностика системы</p>
+          <ul class="card-list">
+            <li data-i18n="card.toolkit.li1">Автозагрузка и процессы</li>
+            <li data-i18n="card.toolkit.li2">Проверка файла hosts</li>
+            <li data-i18n="card.toolkit.li3">Установленные шрифты</li>
+            <li data-i18n="card.toolkit.li4">Диспетчер с деревом процессов</li>
+          </ul>
+          <div class="card-foot">
+            <span class="size" data-i18n="card.toolkit.size">~50 МБ</span>
+            <a href="#" class="link" data-link="rel-toolkit" target="_blank" rel="noopener" data-i18n="card.toolkit.link">Скачать EXE ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="screens">
+    <div class="wrap">
+      <h2 class="section-title reveal" data-i18n="screens.title">Скриншоты</h2>
+      <p class="section-sub reveal" data-i18n="screens.sub">Тёмная тема, акцент #7c5cff, шрифт Segoe UI.</p>
+
+      <div class="shots">
+        <figure class="shot reveal">
+          <div class="shot-frame">
+            <img src="assets/1-hub.png" alt="Overlord Hub" loading="lazy" onerror="this.closest('figure').remove()">
+          </div>
+          <figcaption data-i18n="screens.cap1">Overlord Hub — лаунчер и загрузка программ</figcaption>
+        </figure>
+
+        <figure class="shot reveal">
+          <div class="shot-frame">
+            <img src="assets/2-chat.png" alt="Чат с ИИ-ассистентом" loading="lazy" onerror="this.closest('figure').remove()">
+          </div>
+          <figcaption data-i18n="screens.cap2">ИИ-ассистент: чат, документы, DeepThink</figcaption>
+        </figure>
+
+        <figure class="shot reveal">
+          <div class="shot-frame">
+            <img src="assets/3-privacy.png" alt="Overlord Privacy" loading="lazy" onerror="this.closest('figure').remove()">
+          </div>
+          <figcaption data-i18n="screens.cap3">Overlord Privacy — офлайн-режим</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="shots-subtitle reveal" data-i18n="screens.toolkitTitle">OVL Toolkit — три вкладки</h3>
+      <div class="shots shots-three">
+        <figure class="shot reveal">
+          <div class="shot-frame">
+            <img src="assets/4-toolkit-main.png" alt="OVL Toolkit — главный экран" loading="lazy" onerror="this.closest('figure').remove()">
+          </div>
+          <figcaption data-i18n="screens.cap4">OVL Toolkit — главный экран</figcaption>
+        </figure>
+
+        <figure class="shot reveal">
+          <div class="shot-frame">
+            <img src="assets/5-toolkit-tab2.png" alt="OVL Toolkit — вкладка 2" loading="lazy" onerror="this.closest('figure').remove()">
+          </div>
+          <figcaption data-i18n="screens.cap5">OVL Toolkit — автозагрузка и процессы</figcaption>
+        </figure>
+
+        <figure class="shot reveal">
+          <div class="shot-frame">
+            <img src="assets/6-toolkit-tab3.png" alt="OVL Toolkit — вкладка 3" loading="lazy" onerror="this.closest('figure').remove()">
+          </div>
+          <figcaption data-i18n="screens.cap6">OVL Toolkit — диспетчер с деревом процессов</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="install">
+    <div class="wrap">
+      <h2 class="section-title reveal" data-i18n="install.title">Установка за 4 шага</h2>
+      <p class="section-sub reveal" data-i18n="install.sub">Ничего настраивать вручную не нужно — хаб всё сделает сам.</p>
+
+      <ol class="steps">
+        <li class="reveal">
+          <span class="step-num">1</span>
+          <h4 data-i18n="install.step1.title">Скачайте установщик</h4>
+          <p data-i18n="install.step1.text">Нажмите кнопку «Скачать Overlord» вверху страницы — файл OverlordSetup.exe (~38 МБ).</p>
+        </li>
+        <li class="reveal">
+          <span class="step-num">2</span>
+          <h4 data-i18n="install.step2.title">Запустите и подтвердите</h4>
+          <p data-i18n="install.step2.text">Windows покажет синее окно «Защитник Windows». Нажмите «Подробнее» → «Выполнить в любом случае».</p>
+        </li>
+        <li class="reveal">
+          <span class="step-num">3</span>
+          <h4 data-i18n="install.step3.title">Дождитесь установки</h4>
+          <p data-i18n="install.step3.text">Программа поставится в C:\Overlord\, а на рабочем столе появится ярлык Overlord.</p>
+        </li>
+        <li class="reveal">
+          <span class="step-num">4</span>
+          <h4 data-i18n="install.step4.title">Запустите хаб</h4>
+          <p data-i18n="install.step4.text">Хаб сам проверит Ollama, скачает нужную программу и модели. Первая загрузка моделей требует интернета.</p>
+        </li>
+      </ol>
+
+      <div class="cta reveal">
+        <a href="#" class="btn btn-primary btn-lg" data-link="download">
+          <span class="btn-shine"></span>
+          <span>⬇</span> <span data-i18n="install.download">Скачать OverlordSetup.exe</span>
+        </a>
+        <a href="#" class="btn btn-ghost" data-link="releases" target="_blank" rel="noopener" data-i18n="install.releases">
+          Все релизы на GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="faq">
+    <div class="wrap wrap-narrow">
+      <h2 class="section-title reveal" data-i18n="faq.title">Частые вопросы</h2>
+
+      <div class="faq reveal">
+
+        <details>
+          <summary data-i18n="faq.q1">Антивирус ругается на Trojan:Win32/Wacatac.C!ml. Это вирус?</summary>
+          <div class="faq-body" data-i18n-html="faq.a1">
+            <p><b>Нет, это ложное срабатывание.</b> Все программы собраны через PyInstaller, а антивирусы часто помечают такие сборки ML-детектом.</p>
+            <p>Проверка на VirusTotal даёт <b>1 из 69</b> срабатываний. Malwarebytes, Kaspersky, ESET, Bitdefender и Avast — чисто.</p>
+            <p><b>Что делать:</b> нажмите «Подробнее» → «Выполнить в любом случае». Либо добавьте папку <code>C:\Overlord\</code> в исключения.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq.q2">Что такое Ollama и зачем она нужна?</summary>
+          <div class="faq-body" data-i18n-html="faq.a2">
+            <p><b>Ollama</b> — бесплатная программа, которая запускает языковые модели прямо на вашем компьютере. Именно она «думает» за Overlord.</p>
+            <p>Хаб находит Ollama автоматически. Если её нет — предложит скачать и установить. После этого он сам загрузит нужные модели командой <code>ollama pull</code>.</p>
+            <p class="muted">Плюс: всё работает локально, ваши тексты никуда не отправляются.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq.q3">Какие требования к компьютеру?</summary>
+          <div class="faq-body" data-i18n-html="faq.a3">
+            <ul>
+              <li><b>ОС:</b> Windows 10 или 11 (64-бит)</li>
+              <li><b>ОЗУ:</b> минимум 8 ГБ, комфортно — 16 ГБ</li>
+              <li><b>Диск:</b> ~10 ГБ свободно</li>
+              <li><b>Интернет:</b> нужен только для первой загрузки моделей</li>
+            </ul>
+            <p class="muted">Для слабых ноутбуков есть отдельная версия — <b>Overlord Privacy</b>: она легче и работает полностью офлайн.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq.q4">Куда отправляются мои данные?</summary>
+          <div class="faq-body" data-i18n-html="faq.a4">
+            <p><b>Никуда.</b> Overlord работает на вашем компьютере. Обработка текста и документов идёт локально через Ollama.</p>
+            <p>Исключение — функция <b>Cloud Vision</b> (распознавание изображений) в версии v1.2: она по желанию отправляет картинку в облако. Если приватность важнее — используйте <b>Overlord Privacy</b>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq.q5">Нужно ли платить?</summary>
+          <div class="faq-body" data-i18n-html="faq.a5">
+            <p>Нет. Проект бесплатный и открытый — исходники лежат на GitHub. Платить нужно только за электричество 🙂</p>
+          </div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq.q6">Как удалить программу?</summary>
+          <div class="faq-body" data-i18n-html="faq.a6">
+            <p>Через «Параметры → Приложения → Overlord → Удалить». Отдельную программу из хаба можно убрать так:</p>
+            <pre><code>Remove-Item -Recurse -Force "C:\OverlordHub\apps\privacy" -ErrorAction SilentlyContinue</code></pre>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">♛</span>
+      <div>
+        <strong>Overlord</strong>
+        <p class="muted" data-i18n="footer.desc">ИИ-ассистент, приватность и системный Toolkit для Windows.</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#" data-link="github" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" data-link="releases" target="_blank" rel="noopener">Releases</a>
+    </div>
+    <p class="footer-copy muted">© <span data-year>2026</span> Overlord Project</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
